@@ -1,7 +1,11 @@
 extends layouts/main
+include mixins/videoBlock
 
 block content
     .videos
-        each dogdog in videos
-            h1= dogdog.title
-            h2= dogdog.description
+        each piza in videos
+            +videoBlock({
+                title: piza.title,
+                views: piza.views,
+                videoFile: piza.videoFile 
+            })
