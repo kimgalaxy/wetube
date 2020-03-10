@@ -5,6 +5,7 @@ block content
     .videos
         each piza in videos
             +videoBlock({
+                id: piza.id,
                 title: piza.title,
                 views: piza.views,
                 videoFile: piza.videoFile 
